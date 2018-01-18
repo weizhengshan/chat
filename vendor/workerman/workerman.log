@@ -1,0 +1,574 @@
+2017-11-16 10:03:03 pid:27213 Workerman[server.php] start in DEBUG mode
+2017-11-16 11:24:17 pid:27213 Workerman[server.php] stopping ...
+2017-11-16 11:24:17 pid:27213 Workerman[server.php] has been stopped
+2017-11-16 11:24:18 pid:28302 Workerman[server.php] start in DEBUG mode
+2017-11-16 11:35:57 pid:28302 Workerman[server.php] stopping ...
+2017-11-16 11:35:57 pid:28302 Workerman[server.php] has been stopped
+2017-11-16 11:35:59 pid:28439 Workerman[server.php] start in DEBUG mode
+2017-11-16 15:33:52 pid:28439 Workerman[server.php] stopping ...
+2017-11-16 15:33:52 pid:28439 Workerman[server.php] has been stopped
+2017-11-16 15:33:54 pid:31746 Workerman[server.php] start in DEBUG mode
+2017-11-16 15:52:11 pid:31746 Workerman[server.php] stopping ...
+2017-11-16 15:52:11 pid:31746 Workerman[server.php] has been stopped
+2017-11-16 15:52:12 pid:32019 Workerman[server.php] start in DEBUG mode
+2017-11-16 15:53:12 pid:32021 exception 'think\exception\ErrorException' with message 'Undefined property: Workerman\Connection\TcpConnection::$uid' in /var/www/chat.shidaishangyou.com/application/push/controller/Worker.php:70
+Stack trace:
+#0 /var/www/chat.shidaishangyou.com/application/push/controller/Worker.php(70): think\Error::appError(8, 'Undefined prope...', '/var/www/chat.s...', 70, Array)
+#1 [internal function]: app\push\controller\Worker->onMessage(Object(Workerman\Connection\TcpConnection), '{"type":"messag...')
+#2 /var/www/chat.shidaishangyou.com/vendor/workerman/workerman/Connection/TcpConnection.php(657): call_user_func(Array, Object(Workerman\Connection\TcpConnection), '{"type":"messag...')
+#3 [internal function]: Workerman\Connection\TcpConnection->baseRead(Resource id #66)
+#4 /var/www/chat.shidaishangyou.com/vendor/workerman/workerman/Events/Select.php(286): call_user_func_array(Array, Array)
+#5 /var/www/chat.shidaishangyou.com/vendor/workerman/workerman/Worker.php(1882): Workerman\Events\Select->loop()
+#6 /var/www/chat.shidaishangyou.com/vendor/workerman/workerman/Worker.php(1107): Workerman\Worker->run()
+#7 /var/www/chat.shidaishangyou.com/vendor/workerman/workerman/Worker.php(1070): Workerman\Worker::forkOneWorker(Object(Workerman\Worker))
+#8 /var/www/chat.shidaishangyou.com/vendor/workerman/workerman/Worker.php(445): Workerman\Worker::forkWorkers()
+#9 /var/www/chat.shidaishangyou.com/vendor/topthink/think-worker/src/Server.php(48): Workerman\Worker::runAll()
+#10 [internal function]: think\worker\Server->__construct()
+#11 /var/www/chat.shidaishangyou.com/thinkphp/library/think/App.php(216): ReflectionClass->newInstanceArgs(Array)
+#12 /var/www/chat.shidaishangyou.com/thinkphp/library/think/Loader.php(400): think\App::invokeClass('app\push\contro...')
+#13 /var/www/chat.shidaishangyou.com/thinkphp/library/think/App.php(388): think\Loader::controller('worker', 'controller', false, 'Error')
+#14 /var/www/chat.shidaishangyou.com/thinkphp/library/think/App.php(296): think\App::module(Array, Array, NULL)
+#15 /var/www/chat.shidaishangyou.com/thinkphp/library/think/App.php(124): think\App::exec(Array, Array)
+#16 /var/www/chat.shidaishangyou.com/thinkphp/start.php(18): think\App::run()
+#17 /var/www/chat.shidaishangyou.com/server.php(7): require('/var/www/chat.s...')
+#18 {main}
+2017-11-16 15:53:12 pid:32021 Worker[32021] process terminated
+2017-11-16 15:53:12 pid:32019 worker[none:32021] exit with status 64000
+2017-11-16 15:56:58 pid:32019 Workerman[server.php] stopping ...
+2017-11-16 15:56:58 pid:32019 Workerman[server.php] has been stopped
+2017-11-16 15:57:54 pid:32056 Workerman[server.php] start in DEBUG mode
+2017-11-16 15:58:22 pid:32058 exception 'think\exception\ErrorException' with message 'Undefined property: Workerman\Connection\TcpConnection::$uid' in /var/www/chat.shidaishangyou.com/application/push/controller/Worker.php:70
+Stack trace:
+#0 /var/www/chat.shidaishangyou.com/application/push/controller/Worker.php(70): think\Error::appError(8, 'Undefined prope...', '/var/www/chat.s...', 70, Array)
+#1 [internal function]: app\push\controller\Worker->onMessage(Object(Workerman\Connection\TcpConnection), '{"type":"messag...')
+#2 /var/www/chat.shidaishangyou.com/vendor/workerman/workerman/Connection/TcpConnection.php(657): call_user_func(Array, Object(Workerman\Connection\TcpConnection), '{"type":"messag...')
+#3 [internal function]: Workerman\Connection\TcpConnection->baseRead(Resource id #65)
+#4 /var/www/chat.shidaishangyou.com/vendor/workerman/workerman/Events/Select.php(286): call_user_func_array(Array, Array)
+#5 /var/www/chat.shidaishangyou.com/vendor/workerman/workerman/Worker.php(1882): Workerman\Events\Select->loop()
+#6 /var/www/chat.shidaishangyou.com/vendor/workerman/workerman/Worker.php(1107): Workerman\Worker->run()
+#7 /var/www/chat.shidaishangyou.com/vendor/workerman/workerman/Worker.php(1070): Workerman\Worker::forkOneWorker(Object(Workerman\Worker))
+#8 /var/www/chat.shidaishangyou.com/vendor/workerman/workerman/Worker.php(445): Workerman\Worker::forkWorkers()
+#9 /var/www/chat.shidaishangyou.com/vendor/topthink/think-worker/src/Server.php(48): Workerman\Worker::runAll()
+#10 [internal function]: think\worker\Server->__construct()
+#11 /var/www/chat.shidaishangyou.com/thinkphp/library/think/App.php(216): ReflectionClass->newInstanceArgs(Array)
+#12 /var/www/chat.shidaishangyou.com/thinkphp/library/think/Loader.php(400): think\App::invokeClass('app\push\contro...')
+#13 /var/www/chat.shidaishangyou.com/thinkphp/library/think/App.php(388): think\Loader::controller('worker', 'controller', false, 'Error')
+#14 /var/www/chat.shidaishangyou.com/thinkphp/library/think/App.php(296): think\App::module(Array, Array, NULL)
+#15 /var/www/chat.shidaishangyou.com/thinkphp/library/think/App.php(124): think\App::exec(Array, Array)
+#16 /var/www/chat.shidaishangyou.com/thinkphp/start.php(18): think\App::run()
+#17 /var/www/chat.shidaishangyou.com/server.php(7): require('/var/www/chat.s...')
+#18 {main}
+2017-11-16 15:58:22 pid:32058 Worker[32058] process terminated
+2017-11-16 15:58:22 pid:32056 worker[none:32058] exit with status 64000
+2017-11-16 16:06:05 pid:32056 Workerman[server.php] stopping ...
+2017-11-16 16:06:05 pid:32056 Workerman[server.php] has been stopped
+2017-11-16 16:06:07 pid:32191 Workerman[server.php] start in DEBUG mode
+2017-11-16 16:06:24 pid:32193 exception 'think\exception\ErrorException' with message 'Undefined property: Workerman\Connection\TcpConnection::$uid' in /var/www/chat.shidaishangyou.com/application/push/controller/Worker.php:70
+Stack trace:
+#0 /var/www/chat.shidaishangyou.com/application/push/controller/Worker.php(70): think\Error::appError(8, 'Undefined prope...', '/var/www/chat.s...', 70, Array)
+#1 [internal function]: app\push\controller\Worker->onMessage(Object(Workerman\Connection\TcpConnection), '{"type":"messag...')
+#2 /var/www/chat.shidaishangyou.com/vendor/workerman/workerman/Connection/TcpConnection.php(657): call_user_func(Array, Object(Workerman\Connection\TcpConnection), '{"type":"messag...')
+#3 [internal function]: Workerman\Connection\TcpConnection->baseRead(Resource id #66)
+#4 /var/www/chat.shidaishangyou.com/vendor/workerman/workerman/Events/Select.php(286): call_user_func_array(Array, Array)
+#5 /var/www/chat.shidaishangyou.com/vendor/workerman/workerman/Worker.php(1882): Workerman\Events\Select->loop()
+#6 /var/www/chat.shidaishangyou.com/vendor/workerman/workerman/Worker.php(1107): Workerman\Worker->run()
+#7 /var/www/chat.shidaishangyou.com/vendor/workerman/workerman/Worker.php(1070): Workerman\Worker::forkOneWorker(Object(Workerman\Worker))
+#8 /var/www/chat.shidaishangyou.com/vendor/workerman/workerman/Worker.php(445): Workerman\Worker::forkWorkers()
+#9 /var/www/chat.shidaishangyou.com/vendor/topthink/think-worker/src/Server.php(48): Workerman\Worker::runAll()
+#10 [internal function]: think\worker\Server->__construct()
+#11 /var/www/chat.shidaishangyou.com/thinkphp/library/think/App.php(216): ReflectionClass->newInstanceArgs(Array)
+#12 /var/www/chat.shidaishangyou.com/thinkphp/library/think/Loader.php(400): think\App::invokeClass('app\push\contro...')
+#13 /var/www/chat.shidaishangyou.com/thinkphp/library/think/App.php(388): think\Loader::controller('worker', 'controller', false, 'Error')
+#14 /var/www/chat.shidaishangyou.com/thinkphp/library/think/App.php(296): think\App::module(Array, Array, NULL)
+#15 /var/www/chat.shidaishangyou.com/thinkphp/library/think/App.php(124): think\App::exec(Array, Array)
+#16 /var/www/chat.shidaishangyou.com/thinkphp/start.php(18): think\App::run()
+#17 /var/www/chat.shidaishangyou.com/server.php(7): require('/var/www/chat.s...')
+#18 {main}
+2017-11-16 16:06:24 pid:32193 Worker[32193] process terminated
+2017-11-16 16:06:24 pid:32191 worker[none:32193] exit with status 64000
+2017-11-16 16:07:42 pid:32191 Workerman[server.php] stopping ...
+2017-11-16 16:07:42 pid:32191 Workerman[server.php] has been stopped
+2017-11-16 16:07:51 pid:32274 Workerman[server.php] start in DEBUG mode
+2017-11-16 16:10:42 pid:32274 Workerman[server.php] stopping ...
+2017-11-16 16:10:42 pid:32274 Workerman[server.php] has been stopped
+2017-11-16 16:10:44 pid:32397 Workerman[server.php] start in DEBUG mode
+2017-11-16 18:06:30 pid:32399 exception 'think\exception\ErrorException' with message 'Undefined property: Workerman\Connection\TcpConnection::$uid' in /var/www/chat.shidaishangyou.com/application/push/controller/Worker.php:67
+Stack trace:
+#0 /var/www/chat.shidaishangyou.com/application/push/controller/Worker.php(67): think\Error::appError(8, 'Undefined prope...', '/var/www/chat.s...', 67, Array)
+#1 [internal function]: app\push\controller\Worker->onMessage(Object(Workerman\Connection\TcpConnection), '{"type":"messag...')
+#2 /var/www/chat.shidaishangyou.com/vendor/workerman/workerman/Connection/TcpConnection.php(657): call_user_func(Array, Object(Workerman\Connection\TcpConnection), '{"type":"messag...')
+#3 [internal function]: Workerman\Connection\TcpConnection->baseRead(Resource id #67)
+#4 /var/www/chat.shidaishangyou.com/vendor/workerman/workerman/Events/Select.php(286): call_user_func_array(Array, Array)
+#5 /var/www/chat.shidaishangyou.com/vendor/workerman/workerman/Worker.php(1882): Workerman\Events\Select->loop()
+#6 /var/www/chat.shidaishangyou.com/vendor/workerman/workerman/Worker.php(1107): Workerman\Worker->run()
+#7 /var/www/chat.shidaishangyou.com/vendor/workerman/workerman/Worker.php(1070): Workerman\Worker::forkOneWorker(Object(Workerman\Worker))
+#8 /var/www/chat.shidaishangyou.com/vendor/workerman/workerman/Worker.php(445): Workerman\Worker::forkWorkers()
+#9 /var/www/chat.shidaishangyou.com/vendor/topthink/think-worker/src/Server.php(48): Workerman\Worker::runAll()
+#10 [internal function]: think\worker\Server->__construct()
+#11 /var/www/chat.shidaishangyou.com/thinkphp/library/think/App.php(216): ReflectionClass->newInstanceArgs(Array)
+#12 /var/www/chat.shidaishangyou.com/thinkphp/library/think/Loader.php(400): think\App::invokeClass('app\push\contro...')
+#13 /var/www/chat.shidaishangyou.com/thinkphp/library/think/App.php(388): think\Loader::controller('worker', 'controller', false, 'Error')
+#14 /var/www/chat.shidaishangyou.com/thinkphp/library/think/App.php(296): think\App::module(Array, Array, NULL)
+#15 /var/www/chat.shidaishangyou.com/thinkphp/library/think/App.php(124): think\App::exec(Array, Array)
+#16 /var/www/chat.shidaishangyou.com/thinkphp/start.php(18): think\App::run()
+#17 /var/www/chat.shidaishangyou.com/server.php(7): require('/var/www/chat.s...')
+#18 {main}
+2017-11-16 18:06:30 pid:32399 Worker[32399] process terminated
+2017-11-16 18:06:30 pid:32397 worker[none:32399] exit with status 64000
+2017-11-16 18:06:33 pid:1486 exception 'think\exception\ErrorException' with message 'Undefined property: Workerman\Connection\TcpConnection::$uid' in /var/www/chat.shidaishangyou.com/application/push/controller/Worker.php:67
+Stack trace:
+#0 /var/www/chat.shidaishangyou.com/application/push/controller/Worker.php(67): think\Error::appError(8, 'Undefined prope...', '/var/www/chat.s...', 67, Array)
+#1 [internal function]: app\push\controller\Worker->onMessage(Object(Workerman\Connection\TcpConnection), '{"type":"messag...')
+#2 /var/www/chat.shidaishangyou.com/vendor/workerman/workerman/Connection/TcpConnection.php(657): call_user_func(Array, Object(Workerman\Connection\TcpConnection), '{"type":"messag...')
+#3 [internal function]: Workerman\Connection\TcpConnection->baseRead(Resource id #59)
+#4 /var/www/chat.shidaishangyou.com/vendor/workerman/workerman/Events/Select.php(286): call_user_func_array(Array, Array)
+#5 /var/www/chat.shidaishangyou.com/vendor/workerman/workerman/Worker.php(1882): Workerman\Events\Select->loop()
+#6 /var/www/chat.shidaishangyou.com/vendor/workerman/workerman/Worker.php(1107): Workerman\Worker->run()
+#7 /var/www/chat.shidaishangyou.com/vendor/workerman/workerman/Worker.php(1070): Workerman\Worker::forkOneWorker(Object(Workerman\Worker))
+#8 /var/www/chat.shidaishangyou.com/vendor/workerman/workerman/Worker.php(1225): Workerman\Worker::forkWorkers()
+#9 /var/www/chat.shidaishangyou.com/vendor/workerman/workerman/Worker.php(447): Workerman\Worker::monitorWorkers()
+#10 /var/www/chat.shidaishangyou.com/vendor/topthink/think-worker/src/Server.php(48): Workerman\Worker::runAll()
+#11 [internal function]: think\worker\Server->__construct()
+#12 /var/www/chat.shidaishangyou.com/thinkphp/library/think/App.php(216): ReflectionClass->newInstanceArgs(Array)
+#13 /var/www/chat.shidaishangyou.com/thinkphp/library/think/Loader.php(400): think\App::invokeClass('app\push\contro...')
+#14 /var/www/chat.shidaishangyou.com/thinkphp/library/think/App.php(388): think\Loader::controller('worker', 'controller', false, 'Error')
+#15 /var/www/chat.shidaishangyou.com/thinkphp/library/think/App.php(296): think\App::module(Array, Array, NULL)
+#16 /var/www/chat.shidaishangyou.com/thinkphp/library/think/App.php(124): think\App::exec(Array, Array)
+#17 /var/www/chat.shidaishangyou.com/thinkphp/start.php(18): think\App::run()
+#18 /var/www/chat.shidaishangyou.com/server.php(7): require('/var/www/chat.s...')
+#19 {main}
+2017-11-16 18:06:33 pid:1486 Worker[1486] process terminated
+2017-11-16 18:06:33 pid:32397 worker[none:1486] exit with status 64000
+2017-11-16 18:06:48 pid:1487 exception 'think\exception\ErrorException' with message 'Undefined property: Workerman\Connection\TcpConnection::$uid' in /var/www/chat.shidaishangyou.com/application/push/controller/Worker.php:67
+Stack trace:
+#0 /var/www/chat.shidaishangyou.com/application/push/controller/Worker.php(67): think\Error::appError(8, 'Undefined prope...', '/var/www/chat.s...', 67, Array)
+#1 [internal function]: app\push\controller\Worker->onMessage(Object(Workerman\Connection\TcpConnection), '{"type":"messag...')
+#2 /var/www/chat.shidaishangyou.com/vendor/workerman/workerman/Connection/TcpConnection.php(657): call_user_func(Array, Object(Workerman\Connection\TcpConnection), '{"type":"messag...')
+#3 [internal function]: Workerman\Connection\TcpConnection->baseRead(Resource id #65)
+#4 /var/www/chat.shidaishangyou.com/vendor/workerman/workerman/Events/Select.php(286): call_user_func_array(Array, Array)
+#5 /var/www/chat.shidaishangyou.com/vendor/workerman/workerman/Worker.php(1882): Workerman\Events\Select->loop()
+#6 /var/www/chat.shidaishangyou.com/vendor/workerman/workerman/Worker.php(1107): Workerman\Worker->run()
+#7 /var/www/chat.shidaishangyou.com/vendor/workerman/workerman/Worker.php(1070): Workerman\Worker::forkOneWorker(Object(Workerman\Worker))
+#8 /var/www/chat.shidaishangyou.com/vendor/workerman/workerman/Worker.php(1225): Workerman\Worker::forkWorkers()
+#9 /var/www/chat.shidaishangyou.com/vendor/workerman/workerman/Worker.php(447): Workerman\Worker::monitorWorkers()
+#10 /var/www/chat.shidaishangyou.com/vendor/topthink/think-worker/src/Server.php(48): Workerman\Worker::runAll()
+#11 [internal function]: think\worker\Server->__construct()
+#12 /var/www/chat.shidaishangyou.com/thinkphp/library/think/App.php(216): ReflectionClass->newInstanceArgs(Array)
+#13 /var/www/chat.shidaishangyou.com/thinkphp/library/think/Loader.php(400): think\App::invokeClass('app\push\contro...')
+#14 /var/www/chat.shidaishangyou.com/thinkphp/library/think/App.php(388): think\Loader::controller('worker', 'controller', false, 'Error')
+#15 /var/www/chat.shidaishangyou.com/thinkphp/library/think/App.php(296): think\App::module(Array, Array, NULL)
+#16 /var/www/chat.shidaishangyou.com/thinkphp/library/think/App.php(124): think\App::exec(Array, Array)
+#17 /var/www/chat.shidaishangyou.com/thinkphp/start.php(18): think\App::run()
+#18 /var/www/chat.shidaishangyou.com/server.php(7): require('/var/www/chat.s...')
+#19 {main}
+2017-11-16 18:06:48 pid:1487 Worker[1487] process terminated
+2017-11-16 18:06:48 pid:32397 worker[none:1487] exit with status 64000
+2017-11-16 18:06:49 pid:1489 exception 'think\exception\ErrorException' with message 'Undefined property: Workerman\Connection\TcpConnection::$uid' in /var/www/chat.shidaishangyou.com/application/push/controller/Worker.php:67
+Stack trace:
+#0 /var/www/chat.shidaishangyou.com/application/push/controller/Worker.php(67): think\Error::appError(8, 'Undefined prope...', '/var/www/chat.s...', 67, Array)
+#1 [internal function]: app\push\controller\Worker->onMessage(Object(Workerman\Connection\TcpConnection), '{"type":"messag...')
+#2 /var/www/chat.shidaishangyou.com/vendor/workerman/workerman/Connection/TcpConnection.php(657): call_user_func(Array, Object(Workerman\Connection\TcpConnection), '{"type":"messag...')
+#3 [internal function]: Workerman\Connection\TcpConnection->baseRead(Resource id #66)
+#4 /var/www/chat.shidaishangyou.com/vendor/workerman/workerman/Events/Select.php(286): call_user_func_array(Array, Array)
+#5 /var/www/chat.shidaishangyou.com/vendor/workerman/workerman/Worker.php(1882): Workerman\Events\Select->loop()
+#6 /var/www/chat.shidaishangyou.com/vendor/workerman/workerman/Worker.php(1107): Workerman\Worker->run()
+#7 /var/www/chat.shidaishangyou.com/vendor/workerman/workerman/Worker.php(1070): Workerman\Worker::forkOneWorker(Object(Workerman\Worker))
+#8 /var/www/chat.shidaishangyou.com/vendor/workerman/workerman/Worker.php(1225): Workerman\Worker::forkWorkers()
+#9 /var/www/chat.shidaishangyou.com/vendor/workerman/workerman/Worker.php(447): Workerman\Worker::monitorWorkers()
+#10 /var/www/chat.shidaishangyou.com/vendor/topthink/think-worker/src/Server.php(48): Workerman\Worker::runAll()
+#11 [internal function]: think\worker\Server->__construct()
+#12 /var/www/chat.shidaishangyou.com/thinkphp/library/think/App.php(216): ReflectionClass->newInstanceArgs(Array)
+#13 /var/www/chat.shidaishangyou.com/thinkphp/library/think/Loader.php(400): think\App::invokeClass('app\push\contro...')
+#14 /var/www/chat.shidaishangyou.com/thinkphp/library/think/App.php(388): think\Loader::controller('worker', 'controller', false, 'Error')
+#15 /var/www/chat.shidaishangyou.com/thinkphp/library/think/App.php(296): think\App::module(Array, Array, NULL)
+#16 /var/www/chat.shidaishangyou.com/thinkphp/library/think/App.php(124): think\App::exec(Array, Array)
+#17 /var/www/chat.shidaishangyou.com/thinkphp/start.php(18): think\App::run()
+#18 /var/www/chat.shidaishangyou.com/server.php(7): require('/var/www/chat.s...')
+#19 {main}
+2017-11-16 18:06:49 pid:1489 Worker[1489] process terminated
+2017-11-16 18:06:49 pid:32397 worker[none:1489] exit with status 64000
+2017-11-16 18:07:05 pid:1490 exception 'think\exception\ErrorException' with message 'Undefined property: Workerman\Connection\TcpConnection::$uid' in /var/www/chat.shidaishangyou.com/application/push/controller/Worker.php:67
+Stack trace:
+#0 /var/www/chat.shidaishangyou.com/application/push/controller/Worker.php(67): think\Error::appError(8, 'Undefined prope...', '/var/www/chat.s...', 67, Array)
+#1 [internal function]: app\push\controller\Worker->onMessage(Object(Workerman\Connection\TcpConnection), '{"type":"messag...')
+#2 /var/www/chat.shidaishangyou.com/vendor/workerman/workerman/Connection/TcpConnection.php(657): call_user_func(Array, Object(Workerman\Connection\TcpConnection), '{"type":"messag...')
+#3 [internal function]: Workerman\Connection\TcpConnection->baseRead(Resource id #68)
+#4 /var/www/chat.shidaishangyou.com/vendor/workerman/workerman/Events/Select.php(286): call_user_func_array(Array, Array)
+#5 /var/www/chat.shidaishangyou.com/vendor/workerman/workerman/Worker.php(1882): Workerman\Events\Select->loop()
+#6 /var/www/chat.shidaishangyou.com/vendor/workerman/workerman/Worker.php(1107): Workerman\Worker->run()
+#7 /var/www/chat.shidaishangyou.com/vendor/workerman/workerman/Worker.php(1070): Workerman\Worker::forkOneWorker(Object(Workerman\Worker))
+#8 /var/www/chat.shidaishangyou.com/vendor/workerman/workerman/Worker.php(1225): Workerman\Worker::forkWorkers()
+#9 /var/www/chat.shidaishangyou.com/vendor/workerman/workerman/Worker.php(447): Workerman\Worker::monitorWorkers()
+#10 /var/www/chat.shidaishangyou.com/vendor/topthink/think-worker/src/Server.php(48): Workerman\Worker::runAll()
+#11 [internal function]: think\worker\Server->__construct()
+#12 /var/www/chat.shidaishangyou.com/thinkphp/library/think/App.php(216): ReflectionClass->newInstanceArgs(Array)
+#13 /var/www/chat.shidaishangyou.com/thinkphp/library/think/Loader.php(400): think\App::invokeClass('app\push\contro...')
+#14 /var/www/chat.shidaishangyou.com/thinkphp/library/think/App.php(388): think\Loader::controller('worker', 'controller', false, 'Error')
+#15 /var/www/chat.shidaishangyou.com/thinkphp/library/think/App.php(296): think\App::module(Array, Array, NULL)
+#16 /var/www/chat.shidaishangyou.com/thinkphp/library/think/App.php(124): think\App::exec(Array, Array)
+#17 /var/www/chat.shidaishangyou.com/thinkphp/start.php(18): think\App::run()
+#18 /var/www/chat.shidaishangyou.com/server.php(7): require('/var/www/chat.s...')
+#19 {main}
+2017-11-16 18:07:05 pid:1490 Worker[1490] process terminated
+2017-11-16 18:07:05 pid:32397 worker[none:1490] exit with status 64000
+2017-11-16 18:07:10 pid:1491 exception 'think\exception\ErrorException' with message 'Undefined property: Workerman\Connection\TcpConnection::$uid' in /var/www/chat.shidaishangyou.com/application/push/controller/Worker.php:67
+Stack trace:
+#0 /var/www/chat.shidaishangyou.com/application/push/controller/Worker.php(67): think\Error::appError(8, 'Undefined prope...', '/var/www/chat.s...', 67, Array)
+#1 [internal function]: app\push\controller\Worker->onMessage(Object(Workerman\Connection\TcpConnection), '{"type":"messag...')
+#2 /var/www/chat.shidaishangyou.com/vendor/workerman/workerman/Connection/TcpConnection.php(657): call_user_func(Array, Object(Workerman\Connection\TcpConnection), '{"type":"messag...')
+#3 [internal function]: Workerman\Connection\TcpConnection->baseRead(Resource id #63)
+#4 /var/www/chat.shidaishangyou.com/vendor/workerman/workerman/Events/Select.php(286): call_user_func_array(Array, Array)
+#5 /var/www/chat.shidaishangyou.com/vendor/workerman/workerman/Worker.php(1882): Workerman\Events\Select->loop()
+#6 /var/www/chat.shidaishangyou.com/vendor/workerman/workerman/Worker.php(1107): Workerman\Worker->run()
+#7 /var/www/chat.shidaishangyou.com/vendor/workerman/workerman/Worker.php(1070): Workerman\Worker::forkOneWorker(Object(Workerman\Worker))
+#8 /var/www/chat.shidaishangyou.com/vendor/workerman/workerman/Worker.php(1225): Workerman\Worker::forkWorkers()
+#9 /var/www/chat.shidaishangyou.com/vendor/workerman/workerman/Worker.php(447): Workerman\Worker::monitorWorkers()
+#10 /var/www/chat.shidaishangyou.com/vendor/topthink/think-worker/src/Server.php(48): Workerman\Worker::runAll()
+#11 [internal function]: think\worker\Server->__construct()
+#12 /var/www/chat.shidaishangyou.com/thinkphp/library/think/App.php(216): ReflectionClass->newInstanceArgs(Array)
+#13 /var/www/chat.shidaishangyou.com/thinkphp/library/think/Loader.php(400): think\App::invokeClass('app\push\contro...')
+#14 /var/www/chat.shidaishangyou.com/thinkphp/library/think/App.php(388): think\Loader::controller('worker', 'controller', false, 'Error')
+#15 /var/www/chat.shidaishangyou.com/thinkphp/library/think/App.php(296): think\App::module(Array, Array, NULL)
+#16 /var/www/chat.shidaishangyou.com/thinkphp/library/think/App.php(124): think\App::exec(Array, Array)
+#17 /var/www/chat.shidaishangyou.com/thinkphp/start.php(18): think\App::run()
+#18 /var/www/chat.shidaishangyou.com/server.php(7): require('/var/www/chat.s...')
+#19 {main}
+2017-11-16 18:07:10 pid:1491 Worker[1491] process terminated
+2017-11-16 18:07:10 pid:32397 worker[none:1491] exit with status 64000
+2017-11-17 09:20:49 pid:13933 Workerman[server.php] start in DEBUG mode
+2017-11-17 09:35:35 pid:13935 exception 'think\exception\ErrorException' with message 'Undefined property: Workerman\Connection\TcpConnection::$uid' in /var/www/chat.shidaishangyou.com/application/push/controller/Worker.php:79
+Stack trace:
+#0 /var/www/chat.shidaishangyou.com/application/push/controller/Worker.php(79): think\Error::appError(8, 'Undefined prope...', '/var/www/chat.s...', 79, Array)
+#1 [internal function]: app\push\controller\Worker->onMessage(Object(Workerman\Connection\TcpConnection), '{"type":"messag...')
+#2 /var/www/chat.shidaishangyou.com/vendor/workerman/workerman/Connection/TcpConnection.php(657): call_user_func(Array, Object(Workerman\Connection\TcpConnection), '{"type":"messag...')
+#3 [internal function]: Workerman\Connection\TcpConnection->baseRead(Resource id #74)
+#4 /var/www/chat.shidaishangyou.com/vendor/workerman/workerman/Events/Select.php(286): call_user_func_array(Array, Array)
+#5 /var/www/chat.shidaishangyou.com/vendor/workerman/workerman/Worker.php(1882): Workerman\Events\Select->loop()
+#6 /var/www/chat.shidaishangyou.com/vendor/workerman/workerman/Worker.php(1107): Workerman\Worker->run()
+#7 /var/www/chat.shidaishangyou.com/vendor/workerman/workerman/Worker.php(1070): Workerman\Worker::forkOneWorker(Object(Workerman\Worker))
+#8 /var/www/chat.shidaishangyou.com/vendor/workerman/workerman/Worker.php(445): Workerman\Worker::forkWorkers()
+#9 /var/www/chat.shidaishangyou.com/vendor/topthink/think-worker/src/Server.php(48): Workerman\Worker::runAll()
+#10 [internal function]: think\worker\Server->__construct()
+#11 /var/www/chat.shidaishangyou.com/thinkphp/library/think/App.php(216): ReflectionClass->newInstanceArgs(Array)
+#12 /var/www/chat.shidaishangyou.com/thinkphp/library/think/Loader.php(400): think\App::invokeClass('app\push\contro...')
+#13 /var/www/chat.shidaishangyou.com/thinkphp/library/think/App.php(388): think\Loader::controller('worker', 'controller', false, 'Error')
+#14 /var/www/chat.shidaishangyou.com/thinkphp/library/think/App.php(296): think\App::module(Array, Array, NULL)
+#15 /var/www/chat.shidaishangyou.com/thinkphp/library/think/App.php(124): think\App::exec(Array, Array)
+#16 /var/www/chat.shidaishangyou.com/thinkphp/start.php(18): think\App::run()
+#17 /var/www/chat.shidaishangyou.com/server.php(7): require('/var/www/chat.s...')
+#18 {main}
+2017-11-17 09:35:35 pid:13935 Worker[13935] process terminated
+2017-11-17 09:35:35 pid:13933 worker[none:13935] exit with status 64000
+2017-11-17 09:36:08 pid:14165 exception 'think\exception\ErrorException' with message 'Undefined property: Workerman\Connection\TcpConnection::$uid' in /var/www/chat.shidaishangyou.com/application/push/controller/Worker.php:79
+Stack trace:
+#0 /var/www/chat.shidaishangyou.com/application/push/controller/Worker.php(79): think\Error::appError(8, 'Undefined prope...', '/var/www/chat.s...', 79, Array)
+#1 [internal function]: app\push\controller\Worker->onMessage(Object(Workerman\Connection\TcpConnection), '{"type":"messag...')
+#2 /var/www/chat.shidaishangyou.com/vendor/workerman/workerman/Connection/TcpConnection.php(657): call_user_func(Array, Object(Workerman\Connection\TcpConnection), '{"type":"messag...')
+#3 [internal function]: Workerman\Connection\TcpConnection->baseRead(Resource id #65)
+#4 /var/www/chat.shidaishangyou.com/vendor/workerman/workerman/Events/Select.php(286): call_user_func_array(Array, Array)
+#5 /var/www/chat.shidaishangyou.com/vendor/workerman/workerman/Worker.php(1882): Workerman\Events\Select->loop()
+#6 /var/www/chat.shidaishangyou.com/vendor/workerman/workerman/Worker.php(1107): Workerman\Worker->run()
+#7 /var/www/chat.shidaishangyou.com/vendor/workerman/workerman/Worker.php(1070): Workerman\Worker::forkOneWorker(Object(Workerman\Worker))
+#8 /var/www/chat.shidaishangyou.com/vendor/workerman/workerman/Worker.php(1225): Workerman\Worker::forkWorkers()
+#9 /var/www/chat.shidaishangyou.com/vendor/workerman/workerman/Worker.php(447): Workerman\Worker::monitorWorkers()
+#10 /var/www/chat.shidaishangyou.com/vendor/topthink/think-worker/src/Server.php(48): Workerman\Worker::runAll()
+#11 [internal function]: think\worker\Server->__construct()
+#12 /var/www/chat.shidaishangyou.com/thinkphp/library/think/App.php(216): ReflectionClass->newInstanceArgs(Array)
+#13 /var/www/chat.shidaishangyou.com/thinkphp/library/think/Loader.php(400): think\App::invokeClass('app\push\contro...')
+#14 /var/www/chat.shidaishangyou.com/thinkphp/library/think/App.php(388): think\Loader::controller('worker', 'controller', false, 'Error')
+#15 /var/www/chat.shidaishangyou.com/thinkphp/library/think/App.php(296): think\App::module(Array, Array, NULL)
+#16 /var/www/chat.shidaishangyou.com/thinkphp/library/think/App.php(124): think\App::exec(Array, Array)
+#17 /var/www/chat.shidaishangyou.com/thinkphp/start.php(18): think\App::run()
+#18 /var/www/chat.shidaishangyou.com/server.php(7): require('/var/www/chat.s...')
+#19 {main}
+2017-11-17 09:36:08 pid:14165 Worker[14165] process terminated
+2017-11-17 09:36:08 pid:13933 worker[none:14165] exit with status 64000
+2017-11-17 09:36:33 pid:14185 exception 'think\exception\ErrorException' with message 'Undefined property: Workerman\Connection\TcpConnection::$uid' in /var/www/chat.shidaishangyou.com/application/push/controller/Worker.php:79
+Stack trace:
+#0 /var/www/chat.shidaishangyou.com/application/push/controller/Worker.php(79): think\Error::appError(8, 'Undefined prope...', '/var/www/chat.s...', 79, Array)
+#1 [internal function]: app\push\controller\Worker->onMessage(Object(Workerman\Connection\TcpConnection), '{"type":"messag...')
+#2 /var/www/chat.shidaishangyou.com/vendor/workerman/workerman/Connection/TcpConnection.php(657): call_user_func(Array, Object(Workerman\Connection\TcpConnection), '{"type":"messag...')
+#3 [internal function]: Workerman\Connection\TcpConnection->baseRead(Resource id #66)
+#4 /var/www/chat.shidaishangyou.com/vendor/workerman/workerman/Events/Select.php(286): call_user_func_array(Array, Array)
+#5 /var/www/chat.shidaishangyou.com/vendor/workerman/workerman/Worker.php(1882): Workerman\Events\Select->loop()
+#6 /var/www/chat.shidaishangyou.com/vendor/workerman/workerman/Worker.php(1107): Workerman\Worker->run()
+#7 /var/www/chat.shidaishangyou.com/vendor/workerman/workerman/Worker.php(1070): Workerman\Worker::forkOneWorker(Object(Workerman\Worker))
+#8 /var/www/chat.shidaishangyou.com/vendor/workerman/workerman/Worker.php(1225): Workerman\Worker::forkWorkers()
+#9 /var/www/chat.shidaishangyou.com/vendor/workerman/workerman/Worker.php(447): Workerman\Worker::monitorWorkers()
+#10 /var/www/chat.shidaishangyou.com/vendor/topthink/think-worker/src/Server.php(48): Workerman\Worker::runAll()
+#11 [internal function]: think\worker\Server->__construct()
+#12 /var/www/chat.shidaishangyou.com/thinkphp/library/think/App.php(216): ReflectionClass->newInstanceArgs(Array)
+#13 /var/www/chat.shidaishangyou.com/thinkphp/library/think/Loader.php(400): think\App::invokeClass('app\push\contro...')
+#14 /var/www/chat.shidaishangyou.com/thinkphp/library/think/App.php(388): think\Loader::controller('worker', 'controller', false, 'Error')
+#15 /var/www/chat.shidaishangyou.com/thinkphp/library/think/App.php(296): think\App::module(Array, Array, NULL)
+#16 /var/www/chat.shidaishangyou.com/thinkphp/library/think/App.php(124): think\App::exec(Array, Array)
+#17 /var/www/chat.shidaishangyou.com/thinkphp/start.php(18): think\App::run()
+#18 /var/www/chat.shidaishangyou.com/server.php(7): require('/var/www/chat.s...')
+#19 {main}
+2017-11-17 09:36:33 pid:14185 Worker[14185] process terminated
+2017-11-17 09:36:33 pid:13933 worker[none:14185] exit with status 64000
+2017-11-17 09:36:40 pid:14186 exception 'think\exception\ErrorException' with message 'Undefined property: Workerman\Connection\TcpConnection::$uid' in /var/www/chat.shidaishangyou.com/application/push/controller/Worker.php:79
+Stack trace:
+#0 /var/www/chat.shidaishangyou.com/application/push/controller/Worker.php(79): think\Error::appError(8, 'Undefined prope...', '/var/www/chat.s...', 79, Array)
+#1 [internal function]: app\push\controller\Worker->onMessage(Object(Workerman\Connection\TcpConnection), '{"type":"messag...')
+#2 /var/www/chat.shidaishangyou.com/vendor/workerman/workerman/Connection/TcpConnection.php(657): call_user_func(Array, Object(Workerman\Connection\TcpConnection), '{"type":"messag...')
+#3 [internal function]: Workerman\Connection\TcpConnection->baseRead(Resource id #67)
+#4 /var/www/chat.shidaishangyou.com/vendor/workerman/workerman/Events/Select.php(286): call_user_func_array(Array, Array)
+#5 /var/www/chat.shidaishangyou.com/vendor/workerman/workerman/Worker.php(1882): Workerman\Events\Select->loop()
+#6 /var/www/chat.shidaishangyou.com/vendor/workerman/workerman/Worker.php(1107): Workerman\Worker->run()
+#7 /var/www/chat.shidaishangyou.com/vendor/workerman/workerman/Worker.php(1070): Workerman\Worker::forkOneWorker(Object(Workerman\Worker))
+#8 /var/www/chat.shidaishangyou.com/vendor/workerman/workerman/Worker.php(1225): Workerman\Worker::forkWorkers()
+#9 /var/www/chat.shidaishangyou.com/vendor/workerman/workerman/Worker.php(447): Workerman\Worker::monitorWorkers()
+#10 /var/www/chat.shidaishangyou.com/vendor/topthink/think-worker/src/Server.php(48): Workerman\Worker::runAll()
+#11 [internal function]: think\worker\Server->__construct()
+#12 /var/www/chat.shidaishangyou.com/thinkphp/library/think/App.php(216): ReflectionClass->newInstanceArgs(Array)
+#13 /var/www/chat.shidaishangyou.com/thinkphp/library/think/Loader.php(400): think\App::invokeClass('app\push\contro...')
+#14 /var/www/chat.shidaishangyou.com/thinkphp/library/think/App.php(388): think\Loader::controller('worker', 'controller', false, 'Error')
+#15 /var/www/chat.shidaishangyou.com/thinkphp/library/think/App.php(296): think\App::module(Array, Array, NULL)
+#16 /var/www/chat.shidaishangyou.com/thinkphp/library/think/App.php(124): think\App::exec(Array, Array)
+#17 /var/www/chat.shidaishangyou.com/thinkphp/start.php(18): think\App::run()
+#18 /var/www/chat.shidaishangyou.com/server.php(7): require('/var/www/chat.s...')
+#19 {main}
+2017-11-17 09:36:40 pid:14186 Worker[14186] process terminated
+2017-11-17 09:36:40 pid:13933 worker[none:14186] exit with status 64000
+2017-11-17 09:36:51 pid:14187 exception 'think\exception\ErrorException' with message 'Undefined property: Workerman\Connection\TcpConnection::$uid' in /var/www/chat.shidaishangyou.com/application/push/controller/Worker.php:79
+Stack trace:
+#0 /var/www/chat.shidaishangyou.com/application/push/controller/Worker.php(79): think\Error::appError(8, 'Undefined prope...', '/var/www/chat.s...', 79, Array)
+#1 [internal function]: app\push\controller\Worker->onMessage(Object(Workerman\Connection\TcpConnection), '{"type":"messag...')
+#2 /var/www/chat.shidaishangyou.com/vendor/workerman/workerman/Connection/TcpConnection.php(657): call_user_func(Array, Object(Workerman\Connection\TcpConnection), '{"type":"messag...')
+#3 [internal function]: Workerman\Connection\TcpConnection->baseRead(Resource id #68)
+#4 /var/www/chat.shidaishangyou.com/vendor/workerman/workerman/Events/Select.php(286): call_user_func_array(Array, Array)
+#5 /var/www/chat.shidaishangyou.com/vendor/workerman/workerman/Worker.php(1882): Workerman\Events\Select->loop()
+#6 /var/www/chat.shidaishangyou.com/vendor/workerman/workerman/Worker.php(1107): Workerman\Worker->run()
+#7 /var/www/chat.shidaishangyou.com/vendor/workerman/workerman/Worker.php(1070): Workerman\Worker::forkOneWorker(Object(Workerman\Worker))
+#8 /var/www/chat.shidaishangyou.com/vendor/workerman/workerman/Worker.php(1225): Workerman\Worker::forkWorkers()
+#9 /var/www/chat.shidaishangyou.com/vendor/workerman/workerman/Worker.php(447): Workerman\Worker::monitorWorkers()
+#10 /var/www/chat.shidaishangyou.com/vendor/topthink/think-worker/src/Server.php(48): Workerman\Worker::runAll()
+#11 [internal function]: think\worker\Server->__construct()
+#12 /var/www/chat.shidaishangyou.com/thinkphp/library/think/App.php(216): ReflectionClass->newInstanceArgs(Array)
+#13 /var/www/chat.shidaishangyou.com/thinkphp/library/think/Loader.php(400): think\App::invokeClass('app\push\contro...')
+#14 /var/www/chat.shidaishangyou.com/thinkphp/library/think/App.php(388): think\Loader::controller('worker', 'controller', false, 'Error')
+#15 /var/www/chat.shidaishangyou.com/thinkphp/library/think/App.php(296): think\App::module(Array, Array, NULL)
+#16 /var/www/chat.shidaishangyou.com/thinkphp/library/think/App.php(124): think\App::exec(Array, Array)
+#17 /var/www/chat.shidaishangyou.com/thinkphp/start.php(18): think\App::run()
+#18 /var/www/chat.shidaishangyou.com/server.php(7): require('/var/www/chat.s...')
+#19 {main}
+2017-11-17 09:36:51 pid:14187 Worker[14187] process terminated
+2017-11-17 09:36:51 pid:13933 worker[none:14187] exit with status 64000
+2017-11-17 09:36:58 pid:14188 exception 'think\exception\ErrorException' with message 'Undefined property: Workerman\Connection\TcpConnection::$uid' in /var/www/chat.shidaishangyou.com/application/push/controller/Worker.php:79
+Stack trace:
+#0 /var/www/chat.shidaishangyou.com/application/push/controller/Worker.php(79): think\Error::appError(8, 'Undefined prope...', '/var/www/chat.s...', 79, Array)
+#1 [internal function]: app\push\controller\Worker->onMessage(Object(Workerman\Connection\TcpConnection), '{"type":"messag...')
+#2 /var/www/chat.shidaishangyou.com/vendor/workerman/workerman/Connection/TcpConnection.php(657): call_user_func(Array, Object(Workerman\Connection\TcpConnection), '{"type":"messag...')
+#3 [internal function]: Workerman\Connection\TcpConnection->baseRead(Resource id #69)
+#4 /var/www/chat.shidaishangyou.com/vendor/workerman/workerman/Events/Select.php(286): call_user_func_array(Array, Array)
+#5 /var/www/chat.shidaishangyou.com/vendor/workerman/workerman/Worker.php(1882): Workerman\Events\Select->loop()
+#6 /var/www/chat.shidaishangyou.com/vendor/workerman/workerman/Worker.php(1107): Workerman\Worker->run()
+#7 /var/www/chat.shidaishangyou.com/vendor/workerman/workerman/Worker.php(1070): Workerman\Worker::forkOneWorker(Object(Workerman\Worker))
+#8 /var/www/chat.shidaishangyou.com/vendor/workerman/workerman/Worker.php(1225): Workerman\Worker::forkWorkers()
+#9 /var/www/chat.shidaishangyou.com/vendor/workerman/workerman/Worker.php(447): Workerman\Worker::monitorWorkers()
+#10 /var/www/chat.shidaishangyou.com/vendor/topthink/think-worker/src/Server.php(48): Workerman\Worker::runAll()
+#11 [internal function]: think\worker\Server->__construct()
+#12 /var/www/chat.shidaishangyou.com/thinkphp/library/think/App.php(216): ReflectionClass->newInstanceArgs(Array)
+#13 /var/www/chat.shidaishangyou.com/thinkphp/library/think/Loader.php(400): think\App::invokeClass('app\push\contro...')
+#14 /var/www/chat.shidaishangyou.com/thinkphp/library/think/App.php(388): think\Loader::controller('worker', 'controller', false, 'Error')
+#15 /var/www/chat.shidaishangyou.com/thinkphp/library/think/App.php(296): think\App::module(Array, Array, NULL)
+#16 /var/www/chat.shidaishangyou.com/thinkphp/library/think/App.php(124): think\App::exec(Array, Array)
+#17 /var/www/chat.shidaishangyou.com/thinkphp/start.php(18): think\App::run()
+#18 /var/www/chat.shidaishangyou.com/server.php(7): require('/var/www/chat.s...')
+#19 {main}
+2017-11-17 09:36:58 pid:14188 Worker[14188] process terminated
+2017-11-17 09:36:58 pid:13933 worker[none:14188] exit with status 64000
+2017-11-17 09:37:00 pid:14189 exception 'think\exception\ErrorException' with message 'Undefined property: Workerman\Connection\TcpConnection::$uid' in /var/www/chat.shidaishangyou.com/application/push/controller/Worker.php:79
+Stack trace:
+#0 /var/www/chat.shidaishangyou.com/application/push/controller/Worker.php(79): think\Error::appError(8, 'Undefined prope...', '/var/www/chat.s...', 79, Array)
+#1 [internal function]: app\push\controller\Worker->onMessage(Object(Workerman\Connection\TcpConnection), '{"type":"messag...')
+#2 /var/www/chat.shidaishangyou.com/vendor/workerman/workerman/Connection/TcpConnection.php(657): call_user_func(Array, Object(Workerman\Connection\TcpConnection), '{"type":"messag...')
+#3 [internal function]: Workerman\Connection\TcpConnection->baseRead(Resource id #65)
+#4 /var/www/chat.shidaishangyou.com/vendor/workerman/workerman/Events/Select.php(286): call_user_func_array(Array, Array)
+#5 /var/www/chat.shidaishangyou.com/vendor/workerman/workerman/Worker.php(1882): Workerman\Events\Select->loop()
+#6 /var/www/chat.shidaishangyou.com/vendor/workerman/workerman/Worker.php(1107): Workerman\Worker->run()
+#7 /var/www/chat.shidaishangyou.com/vendor/workerman/workerman/Worker.php(1070): Workerman\Worker::forkOneWorker(Object(Workerman\Worker))
+#8 /var/www/chat.shidaishangyou.com/vendor/workerman/workerman/Worker.php(1225): Workerman\Worker::forkWorkers()
+#9 /var/www/chat.shidaishangyou.com/vendor/workerman/workerman/Worker.php(447): Workerman\Worker::monitorWorkers()
+#10 /var/www/chat.shidaishangyou.com/vendor/topthink/think-worker/src/Server.php(48): Workerman\Worker::runAll()
+#11 [internal function]: think\worker\Server->__construct()
+#12 /var/www/chat.shidaishangyou.com/thinkphp/library/think/App.php(216): ReflectionClass->newInstanceArgs(Array)
+#13 /var/www/chat.shidaishangyou.com/thinkphp/library/think/Loader.php(400): think\App::invokeClass('app\push\contro...')
+#14 /var/www/chat.shidaishangyou.com/thinkphp/library/think/App.php(388): think\Loader::controller('worker', 'controller', false, 'Error')
+#15 /var/www/chat.shidaishangyou.com/thinkphp/library/think/App.php(296): think\App::module(Array, Array, NULL)
+#16 /var/www/chat.shidaishangyou.com/thinkphp/library/think/App.php(124): think\App::exec(Array, Array)
+#17 /var/www/chat.shidaishangyou.com/thinkphp/start.php(18): think\App::run()
+#18 /var/www/chat.shidaishangyou.com/server.php(7): require('/var/www/chat.s...')
+#19 {main}
+2017-11-17 09:37:00 pid:14189 Worker[14189] process terminated
+2017-11-17 09:37:00 pid:13933 worker[none:14189] exit with status 64000
+2017-11-17 09:40:35 pid:14190 exception 'think\exception\ErrorException' with message 'Undefined property: Workerman\Connection\TcpConnection::$uid' in /var/www/chat.shidaishangyou.com/application/push/controller/Worker.php:79
+Stack trace:
+#0 /var/www/chat.shidaishangyou.com/application/push/controller/Worker.php(79): think\Error::appError(8, 'Undefined prope...', '/var/www/chat.s...', 79, Array)
+#1 [internal function]: app\push\controller\Worker->onMessage(Object(Workerman\Connection\TcpConnection), '{"type":"messag...')
+#2 /var/www/chat.shidaishangyou.com/vendor/workerman/workerman/Connection/TcpConnection.php(657): call_user_func(Array, Object(Workerman\Connection\TcpConnection), '{"type":"messag...')
+#3 [internal function]: Workerman\Connection\TcpConnection->baseRead(Resource id #74)
+#4 /var/www/chat.shidaishangyou.com/vendor/workerman/workerman/Events/Select.php(286): call_user_func_array(Array, Array)
+#5 /var/www/chat.shidaishangyou.com/vendor/workerman/workerman/Worker.php(1882): Workerman\Events\Select->loop()
+#6 /var/www/chat.shidaishangyou.com/vendor/workerman/workerman/Worker.php(1107): Workerman\Worker->run()
+#7 /var/www/chat.shidaishangyou.com/vendor/workerman/workerman/Worker.php(1070): Workerman\Worker::forkOneWorker(Object(Workerman\Worker))
+#8 /var/www/chat.shidaishangyou.com/vendor/workerman/workerman/Worker.php(1225): Workerman\Worker::forkWorkers()
+#9 /var/www/chat.shidaishangyou.com/vendor/workerman/workerman/Worker.php(447): Workerman\Worker::monitorWorkers()
+#10 /var/www/chat.shidaishangyou.com/vendor/topthink/think-worker/src/Server.php(48): Workerman\Worker::runAll()
+#11 [internal function]: think\worker\Server->__construct()
+#12 /var/www/chat.shidaishangyou.com/thinkphp/library/think/App.php(216): ReflectionClass->newInstanceArgs(Array)
+#13 /var/www/chat.shidaishangyou.com/thinkphp/library/think/Loader.php(400): think\App::invokeClass('app\push\contro...')
+#14 /var/www/chat.shidaishangyou.com/thinkphp/library/think/App.php(388): think\Loader::controller('worker', 'controller', false, 'Error')
+#15 /var/www/chat.shidaishangyou.com/thinkphp/library/think/App.php(296): think\App::module(Array, Array, NULL)
+#16 /var/www/chat.shidaishangyou.com/thinkphp/library/think/App.php(124): think\App::exec(Array, Array)
+#17 /var/www/chat.shidaishangyou.com/thinkphp/start.php(18): think\App::run()
+#18 /var/www/chat.shidaishangyou.com/server.php(7): require('/var/www/chat.s...')
+#19 {main}
+2017-11-17 09:40:35 pid:14190 Worker[14190] process terminated
+2017-11-17 09:40:35 pid:13933 worker[none:14190] exit with status 64000
+2017-11-17 09:41:43 pid:13933 Workerman[server.php] stopping ...
+2017-11-17 09:41:43 pid:13933 Workerman[server.php] has been stopped
+2017-11-17 09:42:27 pid:14311 Workerman[server.php] start in DEBUG mode
+2017-11-17 09:45:22 pid:14311 Workerman[server.php] stopping ...
+2017-11-17 09:45:22 pid:14311 Workerman[server.php] has been stopped
+2017-11-17 09:45:23 pid:14354 Workerman[server.php] start in DEBUG mode
+2017-11-17 09:47:51 pid:14356 exception 'think\exception\ErrorException' with message 'Undefined index: touser' in /var/www/chat.shidaishangyou.com/application/push/controller/Worker.php:64
+Stack trace:
+#0 /var/www/chat.shidaishangyou.com/application/push/controller/Worker.php(64): think\Error::appError(8, 'Undefined index...', '/var/www/chat.s...', 64, Array)
+#1 [internal function]: app\push\controller\Worker->onMessage(Object(Workerman\Connection\TcpConnection), '{"type":"messag...')
+#2 /var/www/chat.shidaishangyou.com/vendor/workerman/workerman/Connection/TcpConnection.php(657): call_user_func(Array, Object(Workerman\Connection\TcpConnection), '{"type":"messag...')
+#3 [internal function]: Workerman\Connection\TcpConnection->baseRead(Resource id #68)
+#4 /var/www/chat.shidaishangyou.com/vendor/workerman/workerman/Events/Select.php(286): call_user_func_array(Array, Array)
+#5 /var/www/chat.shidaishangyou.com/vendor/workerman/workerman/Worker.php(1882): Workerman\Events\Select->loop()
+#6 /var/www/chat.shidaishangyou.com/vendor/workerman/workerman/Worker.php(1107): Workerman\Worker->run()
+#7 /var/www/chat.shidaishangyou.com/vendor/workerman/workerman/Worker.php(1070): Workerman\Worker::forkOneWorker(Object(Workerman\Worker))
+#8 /var/www/chat.shidaishangyou.com/vendor/workerman/workerman/Worker.php(445): Workerman\Worker::forkWorkers()
+#9 /var/www/chat.shidaishangyou.com/vendor/topthink/think-worker/src/Server.php(48): Workerman\Worker::runAll()
+#10 [internal function]: think\worker\Server->__construct()
+#11 /var/www/chat.shidaishangyou.com/thinkphp/library/think/App.php(216): ReflectionClass->newInstanceArgs(Array)
+#12 /var/www/chat.shidaishangyou.com/thinkphp/library/think/Loader.php(400): think\App::invokeClass('app\push\contro...')
+#13 /var/www/chat.shidaishangyou.com/thinkphp/library/think/App.php(388): think\Loader::controller('worker', 'controller', false, 'Error')
+#14 /var/www/chat.shidaishangyou.com/thinkphp/library/think/App.php(296): think\App::module(Array, Array, NULL)
+#15 /var/www/chat.shidaishangyou.com/thinkphp/library/think/App.php(124): think\App::exec(Array, Array)
+#16 /var/www/chat.shidaishangyou.com/thinkphp/start.php(18): think\App::run()
+#17 /var/www/chat.shidaishangyou.com/server.php(7): require('/var/www/chat.s...')
+#18 {main}
+2017-11-17 09:47:51 pid:14356 Worker[14356] process terminated
+2017-11-17 09:47:51 pid:14354 worker[none:14356] exit with status 64000
+2017-11-17 09:48:04 pid:14365 exception 'think\exception\ErrorException' with message 'Undefined index: touser' in /var/www/chat.shidaishangyou.com/application/push/controller/Worker.php:64
+Stack trace:
+#0 /var/www/chat.shidaishangyou.com/application/push/controller/Worker.php(64): think\Error::appError(8, 'Undefined index...', '/var/www/chat.s...', 64, Array)
+#1 [internal function]: app\push\controller\Worker->onMessage(Object(Workerman\Connection\TcpConnection), '{"type":"messag...')
+#2 /var/www/chat.shidaishangyou.com/vendor/workerman/workerman/Connection/TcpConnection.php(657): call_user_func(Array, Object(Workerman\Connection\TcpConnection), '{"type":"messag...')
+#3 [internal function]: Workerman\Connection\TcpConnection->baseRead(Resource id #64)
+#4 /var/www/chat.shidaishangyou.com/vendor/workerman/workerman/Events/Select.php(286): call_user_func_array(Array, Array)
+#5 /var/www/chat.shidaishangyou.com/vendor/workerman/workerman/Worker.php(1882): Workerman\Events\Select->loop()
+#6 /var/www/chat.shidaishangyou.com/vendor/workerman/workerman/Worker.php(1107): Workerman\Worker->run()
+#7 /var/www/chat.shidaishangyou.com/vendor/workerman/workerman/Worker.php(1070): Workerman\Worker::forkOneWorker(Object(Workerman\Worker))
+#8 /var/www/chat.shidaishangyou.com/vendor/workerman/workerman/Worker.php(1225): Workerman\Worker::forkWorkers()
+#9 /var/www/chat.shidaishangyou.com/vendor/workerman/workerman/Worker.php(447): Workerman\Worker::monitorWorkers()
+#10 /var/www/chat.shidaishangyou.com/vendor/topthink/think-worker/src/Server.php(48): Workerman\Worker::runAll()
+#11 [internal function]: think\worker\Server->__construct()
+#12 /var/www/chat.shidaishangyou.com/thinkphp/library/think/App.php(216): ReflectionClass->newInstanceArgs(Array)
+#13 /var/www/chat.shidaishangyou.com/thinkphp/library/think/Loader.php(400): think\App::invokeClass('app\push\contro...')
+#14 /var/www/chat.shidaishangyou.com/thinkphp/library/think/App.php(388): think\Loader::controller('worker', 'controller', false, 'Error')
+#15 /var/www/chat.shidaishangyou.com/thinkphp/library/think/App.php(296): think\App::module(Array, Array, NULL)
+#16 /var/www/chat.shidaishangyou.com/thinkphp/library/think/App.php(124): think\App::exec(Array, Array)
+#17 /var/www/chat.shidaishangyou.com/thinkphp/start.php(18): think\App::run()
+#18 /var/www/chat.shidaishangyou.com/server.php(7): require('/var/www/chat.s...')
+#19 {main}
+2017-11-17 09:48:04 pid:14365 Worker[14365] process terminated
+2017-11-17 09:48:04 pid:14354 worker[none:14365] exit with status 64000
+2017-11-17 09:48:10 pid:14421 exception 'think\exception\ErrorException' with message 'Undefined index: touser' in /var/www/chat.shidaishangyou.com/application/push/controller/Worker.php:64
+Stack trace:
+#0 /var/www/chat.shidaishangyou.com/application/push/controller/Worker.php(64): think\Error::appError(8, 'Undefined index...', '/var/www/chat.s...', 64, Array)
+#1 [internal function]: app\push\controller\Worker->onMessage(Object(Workerman\Connection\TcpConnection), '{"type":"messag...')
+#2 /var/www/chat.shidaishangyou.com/vendor/workerman/workerman/Connection/TcpConnection.php(657): call_user_func(Array, Object(Workerman\Connection\TcpConnection), '{"type":"messag...')
+#3 [internal function]: Workerman\Connection\TcpConnection->baseRead(Resource id #66)
+#4 /var/www/chat.shidaishangyou.com/vendor/workerman/workerman/Events/Select.php(286): call_user_func_array(Array, Array)
+#5 /var/www/chat.shidaishangyou.com/vendor/workerman/workerman/Worker.php(1882): Workerman\Events\Select->loop()
+#6 /var/www/chat.shidaishangyou.com/vendor/workerman/workerman/Worker.php(1107): Workerman\Worker->run()
+#7 /var/www/chat.shidaishangyou.com/vendor/workerman/workerman/Worker.php(1070): Workerman\Worker::forkOneWorker(Object(Workerman\Worker))
+#8 /var/www/chat.shidaishangyou.com/vendor/workerman/workerman/Worker.php(1225): Workerman\Worker::forkWorkers()
+#9 /var/www/chat.shidaishangyou.com/vendor/workerman/workerman/Worker.php(447): Workerman\Worker::monitorWorkers()
+#10 /var/www/chat.shidaishangyou.com/vendor/topthink/think-worker/src/Server.php(48): Workerman\Worker::runAll()
+#11 [internal function]: think\worker\Server->__construct()
+#12 /var/www/chat.shidaishangyou.com/thinkphp/library/think/App.php(216): ReflectionClass->newInstanceArgs(Array)
+#13 /var/www/chat.shidaishangyou.com/thinkphp/library/think/Loader.php(400): think\App::invokeClass('app\push\contro...')
+#14 /var/www/chat.shidaishangyou.com/thinkphp/library/think/App.php(388): think\Loader::controller('worker', 'controller', false, 'Error')
+#15 /var/www/chat.shidaishangyou.com/thinkphp/library/think/App.php(296): think\App::module(Array, Array, NULL)
+#16 /var/www/chat.shidaishangyou.com/thinkphp/library/think/App.php(124): think\App::exec(Array, Array)
+#17 /var/www/chat.shidaishangyou.com/thinkphp/start.php(18): think\App::run()
+#18 /var/www/chat.shidaishangyou.com/server.php(7): require('/var/www/chat.s...')
+#19 {main}
+2017-11-17 09:48:10 pid:14421 Worker[14421] process terminated
+2017-11-17 09:48:10 pid:14354 worker[none:14421] exit with status 64000
+2017-11-17 09:48:11 pid:14422 exception 'think\exception\ErrorException' with message 'Undefined index: touser' in /var/www/chat.shidaishangyou.com/application/push/controller/Worker.php:64
+Stack trace:
+#0 /var/www/chat.shidaishangyou.com/application/push/controller/Worker.php(64): think\Error::appError(8, 'Undefined index...', '/var/www/chat.s...', 64, Array)
+#1 [internal function]: app\push\controller\Worker->onMessage(Object(Workerman\Connection\TcpConnection), '{"type":"messag...')
+#2 /var/www/chat.shidaishangyou.com/vendor/workerman/workerman/Connection/TcpConnection.php(657): call_user_func(Array, Object(Workerman\Connection\TcpConnection), '{"type":"messag...')
+#3 [internal function]: Workerman\Connection\TcpConnection->baseRead(Resource id #66)
+#4 /var/www/chat.shidaishangyou.com/vendor/workerman/workerman/Events/Select.php(286): call_user_func_array(Array, Array)
+#5 /var/www/chat.shidaishangyou.com/vendor/workerman/workerman/Worker.php(1882): Workerman\Events\Select->loop()
+#6 /var/www/chat.shidaishangyou.com/vendor/workerman/workerman/Worker.php(1107): Workerman\Worker->run()
+#7 /var/www/chat.shidaishangyou.com/vendor/workerman/workerman/Worker.php(1070): Workerman\Worker::forkOneWorker(Object(Workerman\Worker))
+#8 /var/www/chat.shidaishangyou.com/vendor/workerman/workerman/Worker.php(1225): Workerman\Worker::forkWorkers()
+#9 /var/www/chat.shidaishangyou.com/vendor/workerman/workerman/Worker.php(447): Workerman\Worker::monitorWorkers()
+#10 /var/www/chat.shidaishangyou.com/vendor/topthink/think-worker/src/Server.php(48): Workerman\Worker::runAll()
+#11 [internal function]: think\worker\Server->__construct()
+#12 /var/www/chat.shidaishangyou.com/thinkphp/library/think/App.php(216): ReflectionClass->newInstanceArgs(Array)
+#13 /var/www/chat.shidaishangyou.com/thinkphp/library/think/Loader.php(400): think\App::invokeClass('app\push\contro...')
+#14 /var/www/chat.shidaishangyou.com/thinkphp/library/think/App.php(388): think\Loader::controller('worker', 'controller', false, 'Error')
+#15 /var/www/chat.shidaishangyou.com/thinkphp/library/think/App.php(296): think\App::module(Array, Array, NULL)
+#16 /var/www/chat.shidaishangyou.com/thinkphp/library/think/App.php(124): think\App::exec(Array, Array)
+#17 /var/www/chat.shidaishangyou.com/thinkphp/start.php(18): think\App::run()
+#18 /var/www/chat.shidaishangyou.com/server.php(7): require('/var/www/chat.s...')
+#19 {main}
+2017-11-17 09:48:11 pid:14422 Worker[14422] process terminated
+2017-11-17 09:48:11 pid:14354 worker[none:14422] exit with status 64000
+2017-11-17 09:50:08 pid:14354 Workerman[server.php] stopping ...
+2017-11-17 09:50:09 pid:14354 Workerman[server.php] has been stopped
+2017-11-17 09:50:09 pid:14431 Workerman[server.php] start in DEBUG mode
+2017-11-17 09:52:05 pid:14431 Workerman[server.php] stopping ...
+2017-11-17 09:52:05 pid:14431 Workerman[server.php] has been stopped
+2017-11-17 09:52:06 pid:14537 Workerman[server.php] start in DEBUG mode
+2017-11-17 09:52:20 pid:14539 exception 'think\exception\ErrorException' with message 'Undefined property: Workerman\Connection\TcpConnection::$uid' in /var/www/chat.shidaishangyou.com/application/push/controller/Worker.php:66
+Stack trace:
+#0 /var/www/chat.shidaishangyou.com/application/push/controller/Worker.php(66): think\Error::appError(8, 'Undefined prope...', '/var/www/chat.s...', 66, Array)
+#1 [internal function]: app\push\controller\Worker->onMessage(Object(Workerman\Connection\TcpConnection), '{"type":"messag...')
+#2 /var/www/chat.shidaishangyou.com/vendor/workerman/workerman/Connection/TcpConnection.php(657): call_user_func(Array, Object(Workerman\Connection\TcpConnection), '{"type":"messag...')
+#3 [internal function]: Workerman\Connection\TcpConnection->baseRead(Resource id #63)
+#4 /var/www/chat.shidaishangyou.com/vendor/workerman/workerman/Events/Select.php(286): call_user_func_array(Array, Array)
+#5 /var/www/chat.shidaishangyou.com/vendor/workerman/workerman/Worker.php(1882): Workerman\Events\Select->loop()
+#6 /var/www/chat.shidaishangyou.com/vendor/workerman/workerman/Worker.php(1107): Workerman\Worker->run()
+#7 /var/www/chat.shidaishangyou.com/vendor/workerman/workerman/Worker.php(1070): Workerman\Worker::forkOneWorker(Object(Workerman\Worker))
+#8 /var/www/chat.shidaishangyou.com/vendor/workerman/workerman/Worker.php(445): Workerman\Worker::forkWorkers()
+#9 /var/www/chat.shidaishangyou.com/vendor/topthink/think-worker/src/Server.php(48): Workerman\Worker::runAll()
+#10 [internal function]: think\worker\Server->__construct()
+#11 /var/www/chat.shidaishangyou.com/thinkphp/library/think/App.php(216): ReflectionClass->newInstanceArgs(Array)
+#12 /var/www/chat.shidaishangyou.com/thinkphp/library/think/Loader.php(400): think\App::invokeClass('app\push\contro...')
+#13 /var/www/chat.shidaishangyou.com/thinkphp/library/think/App.php(388): think\Loader::controller('worker', 'controller', false, 'Error')
+#14 /var/www/chat.shidaishangyou.com/thinkphp/library/think/App.php(296): think\App::module(Array, Array, NULL)
+#15 /var/www/chat.shidaishangyou.com/thinkphp/library/think/App.php(124): think\App::exec(Array, Array)
+#16 /var/www/chat.shidaishangyou.com/thinkphp/start.php(18): think\App::run()
+#17 /var/www/chat.shidaishangyou.com/server.php(7): require('/var/www/chat.s...')
+#18 {main}
+2017-11-17 09:52:20 pid:14539 Worker[14539] process terminated
+2017-11-17 09:52:20 pid:14537 worker[none:14539] exit with status 64000
+2017-11-17 09:56:19 pid:14537 Workerman[server.php] stopping ...
+2017-11-17 09:56:19 pid:14537 Workerman[server.php] has been stopped
+2017-11-17 09:56:20 pid:14640 Workerman[server.php] start in DEBUG mode
+2017-11-17 10:26:45 pid:14640 Workerman[server.php] stopping ...
+2017-11-17 10:26:45 pid:14640 Workerman[server.php] has been stopped
+2017-11-17 10:26:46 pid:15077 Workerman[server.php] start in DEBUG mode
+2017-11-17 10:31:37 pid:15077 Workerman[server.php] stopping ...
+2017-11-17 10:31:37 pid:15077 Workerman[server.php] has been stopped
+2017-11-17 10:31:38 pid:15188 Workerman[server.php] start in DEBUG mode
+2017-11-17 11:58:36 pid:15188 Workerman[server.php] stopping ...
+2017-11-17 11:58:36 pid:15188 Workerman[server.php] has been stopped
+2017-11-17 11:58:37 pid:16370 Workerman[server.php] start in DEBUG mode
+2017-11-20 09:30:31 pid:8300 Workerman[server.php] start in DEBUG mode
+2017-11-21 10:41:29 pid:28797 Workerman[server.php] start in DEBUG mode
+2017-11-22 09:45:44 pid:15803 Workerman[server.php] start in DAEMON mode

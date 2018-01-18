@@ -1,0 +1,395 @@
+<div class="chatbox">
+  <div class="chat_top fn-clear">
+    <div class="logo"><img src="__static__/images/logo.png" width="190" height="60"  alt=""/></div>
+    <div class="uinfo fn-clear">
+      <div class="uface" id="userheadimg"></div>
+      <div class="uname" id="username"></div>
+      <div class="uname" id="usex"></div>
+    </div>
+  </div>
+  <div class="chat_message fn-clear">
+    <div class="chat_left">
+      <div class="message_box" id="message_box">
+        <!--
+        <div class="msg_item fn-clear">
+          <div class="uface"><img src="__static__/images/53f44283a4347.jpg" width="40" height="40"  alt=""/></div>
+          <div class="item_right">
+            <div class="msg">近日，TIOBE发布了2014年9月的编程语言排行榜，Java、C++跌至历史最低点，前三名则没有变化，依旧是C、Java、Objective-C。</div>
+            <div class="name_time">猫猫 · 3分钟前</div>
+          </div>
+        </div>
+        -->
+      </div>
+      <div class="write_box">
+        <textarea id="message" name="message" class="write_area" placeholder="说点啥吧..."></textarea>
+        <input type="hidden" name="to_uid" id="to_uid" value="">
+        <div class="facebox fn-clear">
+          <div class="expression" id="expression">
+          <span class="chat_type" id="chat_type" onclick="groupchat();" style="cursor: pointer;">群聊</span>
+          </div>
+          <button name="" class="sub_but">提 交(Ctrl+Enter)</button>
+        </div>
+      </div>
+    </div>
+    <div class="chat_right">
+      <ul class="user_list" title="双击用户私聊" id="userlist">
+        <li class="fn-clear selected"><em>所有用户</em></li>
+
+      </ul>
+    </div>
+  </div>
+</div>
+<script type="text/javascript" src="__static__/layui/layer.js"></script>
+<script src="__static__/layui/layui.js" charset="utf-8"></script>
+<script type="text/javascript">
+  function groupchat () {
+      $('#expression span').css('background', 'transparent').eq(0).css('background', '#fff');
+  }
+  function closechat (uid) {
+      var curuid = $('#to_uid').val();
+      $('#expression span').each(function () {
+          if ($(this).attr('uid') == uid) {
+              $(this).remove();
+              if (curuid == uid) {
+                  $('#to_uid').val('');
+              }
+          }
+      });
+      if (curuid == '') {
+          $('#expression span').css({background:'transparent'}).eq(0).css('background', '#fff');
+      } else {
+          $('#expression span').each(function () {
+              if (curuid == $(this).attr('uid')) {
+                  $(this).css('background', '#fff');
+              } else {
+                  $(this).css('background', 'transparent');
+              }
+          })
+      }
+  }
+  function changetab (uid) {
+      $('#expression span').each(function () {
+          if ($(this).attr('uid') == uid) {
+              $(this).css('background', '#fff');
+          } else {
+              $(this).css('background', 'transparent');
+          }
+      });
+  }
+  function chat(uid) {
+      if (uid == $.trim($('#username').text())) {
+          layer.msg('不能和自己聊天');
+      } else {
+          $('#to_uid').val(uid);
+          $('#expression span').each(function () {
+             if ($(this).attr('uid') == uid) {
+                 $(this).css('background', '#fff');
+             } else {
+                 $(this).css('background', 'transparent');
+             }
+          });
+          $('#expression').append('<span uid="'+uid+'" class="chat_type" style="background: #fff; font-style: normal;"><i uid="'+uid+'"  style="cursor:pointer; background: #fff;  font-style: normal;" onclick="changetab(\''+uid+'\')">我和'+uid+'</i> &nbsp;&nbsp; <em style="background: #f0f0f0; color:#fff; cursor: pointer; margin-top: 2px; padding: 0 2px; color: #333;  font-style: normal;" onclick="closechat(\''+uid+'\');">×</em></span>');
+      }
+  }
+//滚动条滚动到最底部
+function scrollbottom () {
+    var height = $('#message_box').get(0).scrollHeight+20;
+    $('#message_box').scrollTop(height);
+}
+var editormessage, layedit;
+
+//html转义
+function HTMLEncode(html) {
+    var temp = document.createElement("div");
+    (temp.textContent != null) ? (temp.textContent = html) : (temp.innerText = html);
+    var output = temp.innerHTML;
+    temp = null;
+    return output;
+}
+//html反转义
+function HTMLDecode(text) {
+    var temp = document.createElement("div");
+    temp.innerHTML = text;
+    var output = temp.innerText || temp.textContent;
+    temp = null;
+    return output;
+}
+
+  $(function(e) {
+
+    //默认给单选按钮绑定选中状态
+    $('#headimgradio label').live('click', function () {
+       $(this).siblings().removeClass('checked');
+       $(this).addClass('checked');
+       $(this).find('input').get(0).checked = true;
+    });
+
+    var ws, name, client_list = {};
+    //编辑器
+    layui.use('layedit', function() {
+          layedit = layui.layedit;
+          editormessage = layedit.build('message', {
+              height: 47, //设置编辑器高度
+              tool: [
+                  'strong' //加粗
+                  ,'italic' //斜体
+                  ,'underline' //下划线
+                  ,'|' //分割线
+                  ,'link' //超链接
+                  ,'unlink' //清除链接
+                  ,'face' //表情
+              ]
+          }); //建立编辑器
+        /*按下按钮或键盘按键*/
+          $('#LAY_layedit_'+editormessage).contents().find("body").on('keydown', function(event){
+
+              var e = window.event || event;
+              var k = e.keyCode || e.which || e.charCode;
+              //按下ctrl+enter发送消息
+              if((event.ctrlKey && (k == 13 || k == 10) )){
+                  var content = layedit.getContent(editormessage);
+                  if (content == '') {
+                      layer.msg('发送内容不能为空！');
+                  } else {
+                      if ($.trim($('#to_uid').val()) != "") {
+                          sendMessage(content, $('#to_uid').val());
+                      } else {
+                          sendMessage(content);
+                      }
+                      $("iframe").contents().find("body").empty();
+                  }
+              }
+          });
+      });
+
+    function connect() {
+        // 创建websocket
+        ws = new WebSocket("ws://chat.shidaishangyou.com:55151");
+        // 当socket连接打开时，输入用户名
+        ws.onopen = onopen;
+        // 当有消息时根据消息类型显示不同信息
+        ws.onmessage = onmessage;
+        ws.onclose = function () {
+            console.log("连接关闭，定时重连");
+            connect();
+        };
+        ws.onerror = function () {
+            console.log("出现错误");
+        };
+    }
+    // 连接建立时发送登录信息
+    function onopen() {
+            layer.open({
+                type: 1,
+                title: '注册',
+                closeBtn: 1, //不显示关闭按钮
+                shade: [0],
+                area: ['500px', '300px'],
+                //offset: 'rb', //右下角弹出
+                //time: 2000, //2秒后自动关闭
+                anim: 2,
+                closeBtn: 0,
+                content: '<div style="width: 480px; background: #fff; padding: 10px;">\
+                <table>\
+                <tr>\
+                <td style="width: 80px;">用户名:</td>\
+                <td><input type="text" name="username" id="username"/></td>\
+                </tr>\
+                <tr>\
+                <td>性别:</td>\
+                <td><input type="radio" name="sex" value="男" checked/>男 <input type="radio" name="sex" value="女"/>女</td>\
+                </tr>\
+                <tr>\
+                <td valign="top" height="90" style="padding-top: 10px;">头像</td>\
+                <td id="headimgradio">\
+                <label for="headimg1" style="display: block; float: left; width: 60px; height: 60px; margin-right: 2px;" class="checked">\
+                <img src="__static__/images/headimg1.jpg" style="width: 60px; height: 60px;"/>\
+                <input type="radio" name="headimg" value="headimg1.jpg" id="headimg1" checked style="display: none;"/>\
+                </label>\
+                <label for="headimg2" style="display: block; float: left; width: 60px; height: 60px; margin-right: 2px;">\
+                <img src="__static__/images/headimg2.jpg" style="width: 60px; height: 60px;"/>\
+                <input type="radio" name="headimg" value="headimg2.jpg" id="headimg2" style="display: none;"/>\
+                </label>\
+                </td>\
+                </tr>\
+                </table>\
+                </div>',
+                btn: ['确定'],
+                btnAlign: 'c',
+                yes: function(index, layero){
+
+                    if ($.trim($(layero).find('#username').val()) == '') {
+                        layer.msg('用户名不能为空！');
+                        $(layero).find('#username').get(0).focus();
+                    } else {
+                        var username = $.trim($(layero).find('#username').val());
+                        var sex = $(layero).find(':radio[name="sex"]:checked').val();
+                        var headimg = $(layero).find(':radio[name="headimg"]:checked').val();
+                        //提交注册信息
+                        var loginData = '{"type":"login","username":"' + username + '", "sex":"'+sex+'", "headimg":"'+headimg+'"}';
+                        $('#userheadimg').html('<img src="__static__/images/'+headimg+'" style="width: 40px; height: 40px; border-radius: 10px;">');
+                        $('#username').html((username.substring(0,5)));
+                        $('#usex').html(sex);
+                        ws.send(loginData);
+                        layer.close(index);
+                    }
+                }
+            });
+    }
+    // 服务端发来消息时
+    function onmessage(e) {
+        var data = eval("("+e.data+")");
+        switch(data['type']){
+            // 服务端ping客户端
+            case 'ping':
+                ws.send('{"type":"pong"}');
+                break;
+            // 登录 更新用户列表
+            case 'login':
+                layer.msg(data['data']);
+                //将用户添加到好友列表
+                for(var i in data['userinfo'][0]) {
+                    var uid = i;
+                    var userinfo = eval('('+data['userinfo'][0][uid]+')');
+                    var username = userinfo['username'];
+                    var sex = userinfo['sex'];
+                    var headimg = userinfo['headimg'];
+                    var time = userinfo['time'];
+                    $('#userlist').append('<li class="fn-clear" data-id="1" uid="'+uid+'" ondblclick="chat(\''+uid+'\');"><span><img src="__static__/images/'+headimg+'" width="30" height="30"  alt=""/></span><em title="'+username+'">'+(username.substring(0,5))+'<span style="padding-left: 5px;">'+sex+'</span></em></li>');
+                }
+                break;
+            case 'loginerror':
+                var message = data['message'];
+                layer.msg(message, function () {
+                    onopen(); //重新填写
+                });
+            case 'welcome':
+                var message = data['message'];
+                var username = data['userinfo'][0]['username'];
+                var sex = data['userinfo'][0]['sex'];
+                var headimg = data['userinfo'][0]['headimg'];
+                var time = data['userinfo'][0]['time'];
+                $('#message_box').append('<div class="msg_item fn-clear">\
+                <div class="uface"><img src="__static__/images/'+headimg+'" width="40" height="40"  alt="" style="border-radius: 20px;"/></div>\
+                <div class="item_right">\
+                <div class="msg">'+message+'</div>\
+                <div class="name_time">'+(username.substring(0,5))+' 对所有人说 · '+time+'</div>\
+                </div>\
+                </div>');
+                break;
+            case 'adduser':
+                var uid = data['userinfo'][0]['username'];
+                var username = data['userinfo'][0]['username'];
+                var sex = data['userinfo'][0]['sex'];
+                var headimg = data['userinfo'][0]['headimg'];
+                var time = data['userinfo'][0]['time'];
+                $('#userlist').append('<li class="fn-clear" data-id="1" uid="'+uid+'" ondblclick="chat(\''+uid+'\');"><span><img src="__static__/images/'+headimg+'" width="30" height="30"  alt=""/></span><em  title="'+username+'">'+(username.substring(0,5))+'<span style="padding-left: 5px;">'+sex+'</span></em></li>');
+                break;
+            case 'logout':
+                var uid = data['uid'];
+                var username = data['userinfo'][0]['username'];
+                var sex = data['userinfo'][0]['sex'];
+                var headimg = data['userinfo'][0]['headimg'];
+                var time = data['userinfo'][0]['time'];
+                //显示离开消息
+                $('#message_box').append('<div class="msg_item fn-clear">\
+                <div class="uface"><img src="__static__/images/'+headimg+'" width="40" height="40"  alt="" style="border-radius: 20px;"/></div>\
+                <div class="item_right">\
+                <div class="msg">我有事,先行离开了！</div>\
+                <div class="name_time" >'+(username.substring(0,5))+' 对所有人说 · '+time+'</div>\
+                </div>\
+                </div>');
+                //从好友列表删除
+                $('#userlist li').each(function () {
+                    if ($(this).attr('uid') == uid) {
+                        $(this).remove();
+                    }
+                });
+                break;
+            case 'message':
+                var curuser = $.trim($('#username').text());
+                var base64 = new Base64();
+                var message = base64.decode(data['message']);
+                var username = data['userinfo'][0]['username'];
+                var sex = data['userinfo'][0]['sex'];
+                var headimg = data['userinfo'][0]['headimg'];
+                var time = data['userinfo'][0]['time'];
+                if (curuser == username) {  //我自己说的
+                    if (typeof  data['uid'] == 'undefined') {
+                        $('#message_box').append('<div class="msg_item fn-clear">\
+                        <div style="float: right;">\
+                        <div class="item_right" style="float: none;">\
+                        <div class="msg">'+message+'</div>\
+                        <div class="name_time">我对所有人说'+time+'</div>\
+                        </div>\
+                        <div class="uface" style="float: none;"><img src="__static__/images/'+headimg+'" width="40" height="40"  alt="" style="border-radius: 20px; float: right;"/></div>\
+                        </div>\
+                        </div>');
+                    } else {
+                        //对某个人说
+                        $('#message_box').append('<div class="msg_item fn-clear">\
+                        <div style="float: right;">\
+                        <div class="item_right" style="float: right;">\
+                        <div class="msg">'+message+'</div>\
+                        <div class="name_time">我对 '+data['uid']+' 说 '+time+'</div>\
+                        </div>\
+                        <div class="uface" style="float: none;"><img src="__static__/images/'+headimg+'" width="40" height="40"  alt="" style="border-radius: 20px; float: right;"/></div>\
+                        </div>\
+                        </div>');
+                    }
+                } else {
+                    if (typeof  data['uid'] == 'undefined') {
+                        $('#message_box').append('<div class="msg_item fn-clear">\
+                        <div class="uface"><img src="__static__/images/'+headimg+'" width="40" height="40"  alt="" style="border-radius: 20px;"/></div>\
+                        <div class="item_right">\
+                        <div class="msg">'+message+'</div>\
+                        <div class="name_time">'+(username.substring(0,5))+' 对所有人说'+time+'</div>\
+                        </div>\
+                        </div>');
+                    } else {
+                        //对某个人说
+                        $('#message_box').append('<div class="msg_item fn-clear">\
+                        <div class="uface"><img src="__static__/images/'+headimg+'" width="40" height="40"  alt="" style="border-radius: 20px;"/></div>\
+                        <div class="item_right">\
+                        <div class="msg">'+message+'</div>\
+                        <div class="name_time">'+(username.substring(0,5))+'对 '+data['uid']+' 说 '+time+'</div>\
+                        </div>\
+                        </div>');
+                    }
+                }
+                break;
+        }
+        scrollbottom();
+    }
+    connect();
+    scrollbottom();
+
+
+	$('.sub_but').click(function(event){
+        var content = layedit.getContent(editormessage);
+	    if (content == '') {
+	        layer.msg('发送内容不能为空！');
+        } else {
+	        if ($.trim($('#to_uid').val()) != "") {
+                sendMessage(content, $('#to_uid').val());
+            } else {
+                sendMessage(content);
+            }
+            $("iframe").contents().find("body").empty();
+        }
+	});
+
+	//发送消息
+    function sendMessage(content, touser){
+        var base64 = new Base64();
+        content = base64.encode(content);
+        if (typeof touser == 'undefined') {
+            var jsonmessage = '{"type":"message", "message":"'+content+'"}';
+        } else {
+            var jsonmessage = '{"type":"message", "message":"'+content+'", "touser":"'+touser+'"}';
+        }
+        ws.send(jsonmessage);
+        scrollbottom();
+    }
+});
+</script>
